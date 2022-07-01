@@ -13,6 +13,13 @@
 		11B1704A286ED2F400552477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B17048286ED2F400552477 /* LaunchScreen.storyboard */; };
 		11B17054286ED4D600552477 /* PlaygroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17052286ED4D600552477 /* PlaygroundViewController.swift */; };
 		11B17055286ED4D600552477 /* PlaygroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B17053286ED4D600552477 /* PlaygroundViewController.xib */; };
+		11B17059286ED5CA00552477 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17058286ED5CA00552477 /* Word.swift */; };
+		11B1705B286ED66D00552477 /* WordPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1705A286ED66D00552477 /* WordPair.swift */; };
+		11B1705E286ED7B700552477 /* GameHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1705D286ED7B700552477 /* GameHandler.swift */; };
+		11B17060286EDDA800552477 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 11B1705F286EDDA800552477 /* words.json */; };
+		11B17064286EDE2E00552477 /* PreGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17062286EDE2E00552477 /* PreGameViewController.swift */; };
+		11B17065286EDE2E00552477 /* PreGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B17063286EDE2E00552477 /* PreGameViewController.xib */; };
+		11B17067286EF1FC00552477 /* MainGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17066286EF1FC00552477 /* MainGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		11B1704B286ED2F400552477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11B17052286ED4D600552477 /* PlaygroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundViewController.swift; sourceTree = "<group>"; };
 		11B17053286ED4D600552477 /* PlaygroundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaygroundViewController.xib; sourceTree = "<group>"; };
+		11B17058286ED5CA00552477 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		11B1705A286ED66D00552477 /* WordPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPair.swift; sourceTree = "<group>"; };
+		11B1705D286ED7B700552477 /* GameHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHandler.swift; sourceTree = "<group>"; };
+		11B1705F286EDDA800552477 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		11B17062286EDE2E00552477 /* PreGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreGameViewController.swift; sourceTree = "<group>"; };
+		11B17063286EDE2E00552477 /* PreGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreGameViewController.xib; sourceTree = "<group>"; };
+		11B17066286EF1FC00552477 /* MainGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +72,10 @@
 			children = (
 				11B1703D286ED2F000552477 /* AppDelegate.swift */,
 				11B1703F286ED2F000552477 /* SceneDelegate.swift */,
+				11B17057286ED59700552477 /* Model */,
+				11B1705C286ED7A700552477 /* Handler */,
 				11B17051286ED44700552477 /* Views */,
+				11B1705F286EDDA800552477 /* words.json */,
 				11B17046286ED2F400552477 /* Assets.xcassets */,
 				11B17048286ED2F400552477 /* LaunchScreen.storyboard */,
 				11B1704B286ED2F400552477 /* Info.plist */,
@@ -69,6 +86,7 @@
 		11B17051286ED44700552477 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				11B17061286EDE1700552477 /* PreGame */,
 				11B17056286ED4DB00552477 /* Playground */,
 			);
 			path = Views;
@@ -81,6 +99,33 @@
 				11B17053286ED4D600552477 /* PlaygroundViewController.xib */,
 			);
 			path = Playground;
+			sourceTree = "<group>";
+		};
+		11B17057286ED59700552477 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				11B17058286ED5CA00552477 /* Word.swift */,
+				11B1705A286ED66D00552477 /* WordPair.swift */,
+				11B17066286EF1FC00552477 /* MainGame.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		11B1705C286ED7A700552477 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				11B1705D286ED7B700552477 /* GameHandler.swift */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		11B17061286EDE1700552477 /* PreGame */ = {
+			isa = PBXGroup;
+			children = (
+				11B17062286EDE2E00552477 /* PreGameViewController.swift */,
+				11B17063286EDE2E00552477 /* PreGameViewController.xib */,
+			);
+			path = PreGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,8 +187,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				11B17055286ED4D600552477 /* PlaygroundViewController.xib in Resources */,
+				11B17060286EDDA800552477 /* words.json in Resources */,
 				11B1704A286ED2F400552477 /* LaunchScreen.storyboard in Resources */,
 				11B17047286ED2F400552477 /* Assets.xcassets in Resources */,
+				11B17065286EDE2E00552477 /* PreGameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B17067286EF1FC00552477 /* MainGame.swift in Sources */,
 				11B1703E286ED2F000552477 /* AppDelegate.swift in Sources */,
+				11B17064286EDE2E00552477 /* PreGameViewController.swift in Sources */,
+				11B1705B286ED66D00552477 /* WordPair.swift in Sources */,
+				11B1705E286ED7B700552477 /* GameHandler.swift in Sources */,
+				11B17059286ED5CA00552477 /* Word.swift in Sources */,
 				11B17040286ED2F000552477 /* SceneDelegate.swift in Sources */,
 				11B17054286ED4D600552477 /* PlaygroundViewController.swift in Sources */,
 			);
