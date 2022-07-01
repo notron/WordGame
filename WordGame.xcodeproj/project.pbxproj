@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		11B1703E286ED2F000552477 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1703D286ED2F000552477 /* AppDelegate.swift */; };
 		11B17040286ED2F000552477 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1703F286ED2F000552477 /* SceneDelegate.swift */; };
-		11B17042286ED2F000552477 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17041286ED2F000552477 /* ViewController.swift */; };
-		11B17045286ED2F000552477 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B17043286ED2F000552477 /* Main.storyboard */; };
 		11B17047286ED2F400552477 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11B17046286ED2F400552477 /* Assets.xcassets */; };
 		11B1704A286ED2F400552477 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11B17048286ED2F400552477 /* LaunchScreen.storyboard */; };
+		11B17054286ED4D600552477 /* PlaygroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17052286ED4D600552477 /* PlaygroundViewController.swift */; };
+		11B17055286ED4D600552477 /* PlaygroundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B17053286ED4D600552477 /* PlaygroundViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11B1703A286ED2EF00552477 /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11B1703D286ED2F000552477 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11B1703F286ED2F000552477 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		11B17041286ED2F000552477 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		11B17044286ED2F000552477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11B17046286ED2F400552477 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11B17049286ED2F400552477 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11B1704B286ED2F400552477 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11B17052286ED4D600552477 /* PlaygroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaygroundViewController.swift; sourceTree = "<group>"; };
+		11B17053286ED4D600552477 /* PlaygroundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaygroundViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +58,29 @@
 			children = (
 				11B1703D286ED2F000552477 /* AppDelegate.swift */,
 				11B1703F286ED2F000552477 /* SceneDelegate.swift */,
-				11B17041286ED2F000552477 /* ViewController.swift */,
-				11B17043286ED2F000552477 /* Main.storyboard */,
+				11B17051286ED44700552477 /* Views */,
 				11B17046286ED2F400552477 /* Assets.xcassets */,
 				11B17048286ED2F400552477 /* LaunchScreen.storyboard */,
 				11B1704B286ED2F400552477 /* Info.plist */,
 			);
 			path = WordGame;
+			sourceTree = "<group>";
+		};
+		11B17051286ED44700552477 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				11B17056286ED4DB00552477 /* Playground */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		11B17056286ED4DB00552477 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				11B17052286ED4D600552477 /* PlaygroundViewController.swift */,
+				11B17053286ED4D600552477 /* PlaygroundViewController.xib */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +141,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B17055286ED4D600552477 /* PlaygroundViewController.xib in Resources */,
 				11B1704A286ED2F400552477 /* LaunchScreen.storyboard in Resources */,
 				11B17047286ED2F400552477 /* Assets.xcassets in Resources */,
-				11B17045286ED2F000552477 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +154,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B17042286ED2F000552477 /* ViewController.swift in Sources */,
 				11B1703E286ED2F000552477 /* AppDelegate.swift in Sources */,
 				11B17040286ED2F000552477 /* SceneDelegate.swift in Sources */,
+				11B17054286ED4D600552477 /* PlaygroundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		11B17043286ED2F000552477 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11B17044286ED2F000552477 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		11B17048286ED2F400552477 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +300,6 @@
 				INFOPLIST_FILE = WordGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +327,6 @@
 				INFOPLIST_FILE = WordGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
