@@ -20,6 +20,16 @@
 		11B17064286EDE2E00552477 /* PreGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17062286EDE2E00552477 /* PreGameViewController.swift */; };
 		11B17065286EDE2E00552477 /* PreGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B17063286EDE2E00552477 /* PreGameViewController.xib */; };
 		11B17067286EF1FC00552477 /* MainGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17066286EF1FC00552477 /* MainGame.swift */; };
+		11B1707B286F18AE00552477 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17071286F18AE00552477 /* UIView.swift */; };
+		11B1707C286F18AE00552477 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17072286F18AE00552477 /* UIColor.swift */; };
+		11B1707D286F18AE00552477 /* CButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17073286F18AE00552477 /* CButton.swift */; };
+		11B1707E286F18AE00552477 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17074286F18AE00552477 /* UIViewController.swift */; };
+		11B17080286F19FC00552477 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1707F286F19FC00552477 /* MusicPlayer.swift */; };
+		11B17087286F1A1800552477 /* clock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B17082286F1A1800552477 /* clock.mp3 */; };
+		11B17088286F1A1800552477 /* finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B17083286F1A1800552477 /* finish.mp3 */; };
+		11B17089286F1A1800552477 /* kids.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B17084286F1A1800552477 /* kids.mp3 */; };
+		11B1708A286F1A1800552477 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B17085286F1A1800552477 /* music.mp3 */; };
+		11B1708B286F1A1800552477 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11B17086286F1A1800552477 /* click.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +48,16 @@
 		11B17062286EDE2E00552477 /* PreGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreGameViewController.swift; sourceTree = "<group>"; };
 		11B17063286EDE2E00552477 /* PreGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreGameViewController.xib; sourceTree = "<group>"; };
 		11B17066286EF1FC00552477 /* MainGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainGame.swift; sourceTree = "<group>"; };
+		11B17071286F18AE00552477 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		11B17072286F18AE00552477 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		11B17073286F18AE00552477 /* CButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CButton.swift; sourceTree = "<group>"; };
+		11B17074286F18AE00552477 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		11B1707F286F19FC00552477 /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		11B17082286F1A1800552477 /* clock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock.mp3; sourceTree = "<group>"; };
+		11B17083286F1A1800552477 /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = finish.mp3; sourceTree = "<group>"; };
+		11B17084286F1A1800552477 /* kids.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kids.mp3; sourceTree = "<group>"; };
+		11B17085286F1A1800552477 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
+		11B17086286F1A1800552477 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +95,8 @@
 				11B17057286ED59700552477 /* Model */,
 				11B1705C286ED7A700552477 /* Handler */,
 				11B17051286ED44700552477 /* Views */,
+				11B17070286F18AE00552477 /* Extensions */,
+				11B17081286F1A1800552477 /* Sound Effect */,
 				11B1705F286EDDA800552477 /* words.json */,
 				11B17046286ED2F400552477 /* Assets.xcassets */,
 				11B17048286ED2F400552477 /* LaunchScreen.storyboard */,
@@ -114,6 +136,7 @@
 		11B1705C286ED7A700552477 /* Handler */ = {
 			isa = PBXGroup;
 			children = (
+				11B1707F286F19FC00552477 /* MusicPlayer.swift */,
 				11B1705D286ED7B700552477 /* GameHandler.swift */,
 			);
 			path = Handler;
@@ -126,6 +149,29 @@
 				11B17063286EDE2E00552477 /* PreGameViewController.xib */,
 			);
 			path = PreGame;
+			sourceTree = "<group>";
+		};
+		11B17070286F18AE00552477 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				11B17071286F18AE00552477 /* UIView.swift */,
+				11B17072286F18AE00552477 /* UIColor.swift */,
+				11B17073286F18AE00552477 /* CButton.swift */,
+				11B17074286F18AE00552477 /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		11B17081286F1A1800552477 /* Sound Effect */ = {
+			isa = PBXGroup;
+			children = (
+				11B17082286F1A1800552477 /* clock.mp3 */,
+				11B17083286F1A1800552477 /* finish.mp3 */,
+				11B17084286F1A1800552477 /* kids.mp3 */,
+				11B17085286F1A1800552477 /* music.mp3 */,
+				11B17086286F1A1800552477 /* click.wav */,
+			);
+			path = "Sound Effect";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +232,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B17088286F1A1800552477 /* finish.mp3 in Resources */,
+				11B17089286F1A1800552477 /* kids.mp3 in Resources */,
+				11B1708A286F1A1800552477 /* music.mp3 in Resources */,
 				11B17055286ED4D600552477 /* PlaygroundViewController.xib in Resources */,
 				11B17060286EDDA800552477 /* words.json in Resources */,
 				11B1704A286ED2F400552477 /* LaunchScreen.storyboard in Resources */,
+				11B17087286F1A1800552477 /* clock.mp3 in Resources */,
+				11B1708B286F1A1800552477 /* click.wav in Resources */,
 				11B17047286ED2F400552477 /* Assets.xcassets in Resources */,
 				11B17065286EDE2E00552477 /* PreGameViewController.xib in Resources */,
 			);
@@ -201,12 +252,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B17080286F19FC00552477 /* MusicPlayer.swift in Sources */,
 				11B17067286EF1FC00552477 /* MainGame.swift in Sources */,
+				11B1707E286F18AE00552477 /* UIViewController.swift in Sources */,
 				11B1703E286ED2F000552477 /* AppDelegate.swift in Sources */,
+				11B1707D286F18AE00552477 /* CButton.swift in Sources */,
 				11B17064286EDE2E00552477 /* PreGameViewController.swift in Sources */,
+				11B1707C286F18AE00552477 /* UIColor.swift in Sources */,
 				11B1705B286ED66D00552477 /* WordPair.swift in Sources */,
 				11B1705E286ED7B700552477 /* GameHandler.swift in Sources */,
 				11B17059286ED5CA00552477 /* Word.swift in Sources */,
+				11B1707B286F18AE00552477 /* UIView.swift in Sources */,
 				11B17040286ED2F000552477 /* SceneDelegate.swift in Sources */,
 				11B17054286ED4D600552477 /* PlaygroundViewController.swift in Sources */,
 			);

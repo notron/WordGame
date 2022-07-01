@@ -62,7 +62,7 @@ class MainGame {
     private func updateState() {
         delegate?.updateState(correctAttempts, wrongAttempts)
         
-        if wrongAttempts < 3 && totalPairsSeen < 15 {
+        if wrongAttempts < 10 && totalPairsSeen < 15 {
             returnNewWordPair()
         } else {
             timer?.invalidate()

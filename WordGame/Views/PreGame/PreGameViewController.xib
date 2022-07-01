@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,24 +18,53 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0p-gc-I9a">
-                    <rect key="frame" x="180" y="534" width="56" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0p-gc-I9a" customClass="CButton" customModule="WordGame" customModuleProvider="target">
+                    <rect key="frame" x="111" y="589" width="192" height="48"/>
+                    <color key="backgroundColor" name="PRIMARY_1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="bQ0-9g-4pL"/>
+                        <constraint firstAttribute="width" secondItem="b0p-gc-I9a" secondAttribute="height" multiplier="8:2" id="png-vF-2jA"/>
+                    </constraints>
+                    <color key="tintColor" name="PRIMARY_2"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Start">
+                        <fontDescription key="titleFontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="20"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="StartAction:" destination="-1" eventType="touchUpInside" id="4EX-T9-R1w"/>
                     </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_babbel" translatesAutoresizingMaskIntoConstraints="NO" id="iwK-Z1-dT7">
+                    <rect key="frame" x="103.5" y="189.5" width="207" height="207"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iwK-Z1-dT7" secondAttribute="height" multiplier="1:1" id="4dx-aX-mbq"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemTealColor"/>
-            <point key="canvasLocation" x="139" y="101"/>
+            <color key="backgroundColor" name="PRIMARY_2"/>
+            <constraints>
+                <constraint firstItem="iwK-Z1-dT7" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-160" id="7nZ-PS-hhi"/>
+                <constraint firstItem="b0p-gc-I9a" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="8tv-Iq-TRy"/>
+                <constraint firstItem="b0p-gc-I9a" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="160" id="b2q-ws-x5T"/>
+                <constraint firstItem="iwK-Z1-dT7" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="hCb-bE-beG"/>
+                <constraint firstItem="iwK-Z1-dT7" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="uGe-7l-o33"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="100.44642857142857"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="ic_babbel" width="1200" height="630"/>
+        <namedColor name="PRIMARY_1">
+            <color red="0.8774048686" green="0.52855157850000001" blue="0.2822600603" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="PRIMARY_2">
+            <color red="0.99607843159999998" green="0.99607843159999998" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>

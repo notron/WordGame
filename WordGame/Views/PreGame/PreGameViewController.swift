@@ -13,13 +13,13 @@ class PreGameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
     
     @IBAction func StartAction(_ sender: Any) {
+        MusicPlayer.shared.playButtonSound()
         
         let view = PlaygroundViewController(gameHandler.SetUpNewGame())
-        self.present(view, animated: true)
+        self.presentCross(view)
     }
 
 }

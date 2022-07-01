@@ -23,6 +23,7 @@ class GameHandler {
     
     private func CreateWordPairs() -> [WordPair] {
         
+        // list of word objecs form local json file
         var currentWords = words
         var wordPairs = [WordPair]()
         
@@ -38,21 +39,17 @@ class GameHandler {
                 wordPairs.append(WordPair(randomWord.EnglishText, secondRandomWord.SpanishText, false))
             }
         }
-        
         return wordPairs
     }
     
     private func LoadWordsFromJsonFile() -> [Word] {
-        
+        //Extraction list of word objects form local json file
         if let path = Bundle.main.path(forResource: "words", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let words = try JSONDecoder().decode([Word].self, from: data)
                 return words
-
-//                DispatchQueue.main.async() { () -> Void in
-//                    self.tableView.reloadData()
-//                }
+                
             } catch let error {
                 print("parse error: \(error.localizedDescription)")
             }
