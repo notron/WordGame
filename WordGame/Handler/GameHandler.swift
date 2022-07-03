@@ -16,14 +16,14 @@ class GameHandler {
         words = LoadWordsFromJsonFile()
     }
     
-    func SetUpNewGame() -> MainGame {
+    func SetUpNewGame() -> [WordPair] {
         
-        return MainGame(CreateWordPairs())
+        return CreateWordPairs()
     }
     
     private func CreateWordPairs() -> [WordPair] {
         
-        // list of word objecs form local json file
+        // list of word objects form local json file
         var currentWords = words
         var wordPairs = [WordPair]()
         
@@ -32,22 +32,24 @@ class GameHandler {
             if CreateCorrectWordOrNot {
                 
                 let randomWord = currentWords.remove(at: Int.random(in: 0..<currentWords.count-1))
-                wordPairs.append(WordPair(randomWord.EnglishText, randomWord.SpanishText, true))
+                wordPairs.append(WordPair(randomWord.englishText, randomWord.spanishText, true))
             } else {
                 let randomWord = currentWords.remove(at: Int.random(in: 0..<currentWords.count-1))
                 let secondRandomWord = currentWords.remove(at: Int.random(in: 0..<currentWords.count-1))
-                wordPairs.append(WordPair(randomWord.EnglishText, secondRandomWord.SpanishText, false))
+                wordPairs.append(WordPair(randomWord.englishText, secondRandomWord.spanishText, false))
             }
         }
         return wordPairs
     }
     
     private func LoadWordsFromJsonFile() -> [Word] {
+        
         //Extraction list of word objects form local json file
         if let path = Bundle.main.path(forResource: "words", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
                 let words = try JSONDecoder().decode([Word].self, from: data)
+                print(words)
                 return words
                 
             } catch let error {

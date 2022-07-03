@@ -16,10 +16,9 @@ class PreGameViewController: UIViewController {
     }
     
     @IBAction func StartAction(_ sender: Any) {
-        MusicPlayer.shared.playButtonSound()
+        SoundHandler.shared.playSound(.click)
         
-        let view = PlaygroundViewController(gameHandler.SetUpNewGame())
+        let view = PlaygroundViewController()
         self.presentCross(view)
     }
-
 }

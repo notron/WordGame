@@ -8,8 +8,9 @@
 import Foundation
 
 protocol mainGameDelegate {
-    func returnNewWordPair(_ wordPair: WordPair)
-    func updateState(_ correctAttempts: Int, _ wrongAttempts: Int)
+    func returnNewWordPair(_ wordPairViewModel: WordPairViewModel)
+    func updateState(_ stateViewModel: StateViewModel)
+    func gameFinished()
 }
 
 class MainGame {
@@ -24,19 +25,25 @@ class MainGame {
     private var totalPairsSeen = 0
     private var timer : Timer?
     
-    init(_ wordPairs: [WordPair]) {
-        remainedWordPairs = wordPairs
+    func setUpNewGame() {
+        
+        remainedWordPairs = GameHandler.shared.SetUpNewGame()
+        usedWordPairs = []
+        correctAttempts = 0
+        wrongAttempts = 0
+        totalPairsSeen = 0
     }
     
     func startGame(delegate: mainGameDelegate) {
         self.delegate = delegate
         returnNewWordPair()
+        delegate.updateState(StateViewModel(correctAttempts, wrongAttempts))
     }
     
     private func returnNewWordPair() {
         currentWordPair = remainedWordPairs.removeFirst()
         totalPairsSeen += 1
-        delegate?.returnNewWordPair(currentWordPair!)
+        delegate?.returnNewWordPair(WordPairViewModel(currentWordPair!))
         
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: false) { [weak self] (timer) in
@@ -56,17 +63,24 @@ class MainGame {
             currentWordPair?.isUserAnswerCorrectly = false
             wrongAttempts += 1
         }
+        usedWordPairs.append(currentWordPair!)
         updateState()
     }
     
     private func updateState() {
-        delegate?.updateState(correctAttempts, wrongAttempts)
-        
-        if wrongAttempts < 10 && totalPairsSeen < 15 {
+        delegate?.updateState(StateViewModel(correctAttempts, wrongAttempts))
+        if wrongAttempts < 3 && totalPairsSeen < 15 {
             returnNewWordPair()
         } else {
             timer?.invalidate()
             timer = nil
+            delegate?.gameFinished()
         }
+    }
+    
+    func getResult() -> ResultViewModel {
+        
+        let wordPairViewModels = usedWordPairs.map({ WordPairViewModel($0)})
+        return ResultViewModel(wordPairViewModels)
     }
 }

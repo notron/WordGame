@@ -16,30 +16,22 @@ class PlaygroundViewController: UIViewController {
     @IBOutlet weak var mobileWordView: UIView!
     @IBOutlet weak var mobileWordYPosition: NSLayoutConstraint!
     
-    private let game: MainGame
-    
-    init(_ game: MainGame) {
-        self.game = game
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    private let game = MainGame()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         print("viewDidAppear")
+        game.setUpNewGame()
         game.startGame(delegate: self)
     }
     
     @IBAction func correctAction(_ sender: Any) {
-        MusicPlayer.shared.playButtonSound()
+        SoundHandler.shared.playSound(.click)
         game.attemptAction(true)
     }
     
     @IBAction func wrongAction(_ sender: Any) {
-        MusicPlayer.shared.playButtonSound()
+        SoundHandler.shared.playSound(.click)
         game.attemptAction(false)
     }
     
@@ -59,15 +51,20 @@ class PlaygroundViewController: UIViewController {
 
 extension PlaygroundViewController: mainGameDelegate {
     
-    func returnNewWordPair(_ wordPair: WordPair) {
+    func returnNewWordPair(_ wordPairViewModel: WordPairViewModel) {
         
-        englishWordLabel.text = wordPair.EnglishWord
-        spanishWordLabel.text = wordPair.SpanishWord
+        englishWordLabel.text = wordPairViewModel.englishText
+        spanishWordLabel.text = wordPairViewModel.spanishText
         resetMobileViewAnimation()
     }
     
-    func updateState(_ correctAttempts: Int, _ wrongAttempts: Int) {
-        correctAttemptLabel.text = "\(correctAttempts)"
-        wrongAttemptLabel.text = "\(wrongAttempts)"
+    func updateState(_ stateViewModel: StateViewModel) {
+        correctAttemptLabel.text = stateViewModel.correctAttempts
+        wrongAttemptLabel.text = stateViewModel.wrongAttempts
+    }
+    
+    func gameFinished() {
+        let view = ResultViewController(game.getResult(), self)
+        self.presentCross(view)
     }
 }

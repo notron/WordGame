@@ -9,17 +9,17 @@ import Foundation
 
 struct WordPair {
     
-    var EnglishWord: String
-    var SpanishWord: String
+    var englishWord: String
+    var spanishWord: String
     
-    let isTranslationCorrect: Bool
+    var isTranslationCorrect: Bool
     var isUserAnswerCorrectly: Bool?
     
     init(_ EnglishWord: String, _ SpanishWord: String, _ isTranslationCorrect: Bool) {
     
-        self.EnglishWord = EnglishWord
-        self.SpanishWord = SpanishWord
+        self.englishWord = EnglishWord
+        self.spanishWord = SpanishWord
         self.isTranslationCorrect = isTranslationCorrect
-        self.isUserAnswerCorrectly = false
+        self.isUserAnswerCorrectly = nil
     }
 }

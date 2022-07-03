@@ -24,12 +24,20 @@
 		11B1707C286F18AE00552477 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17072286F18AE00552477 /* UIColor.swift */; };
 		11B1707D286F18AE00552477 /* CButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17073286F18AE00552477 /* CButton.swift */; };
 		11B1707E286F18AE00552477 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17074286F18AE00552477 /* UIViewController.swift */; };
-		11B17080286F19FC00552477 /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1707F286F19FC00552477 /* MusicPlayer.swift */; };
-		11B17087286F1A1800552477 /* clock.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B17082286F1A1800552477 /* clock.mp3 */; };
+		11B17080286F19FC00552477 /* SoundHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1707F286F19FC00552477 /* SoundHandler.swift */; };
 		11B17088286F1A1800552477 /* finish.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B17083286F1A1800552477 /* finish.mp3 */; };
 		11B17089286F1A1800552477 /* kids.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B17084286F1A1800552477 /* kids.mp3 */; };
-		11B1708A286F1A1800552477 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 11B17085286F1A1800552477 /* music.mp3 */; };
 		11B1708B286F1A1800552477 /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 11B17086286F1A1800552477 /* click.wav */; };
+		11B1708F286F44CB00552477 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1708D286F44CB00552477 /* ResultViewController.swift */; };
+		11B17090286F44CB00552477 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B1708E286F44CB00552477 /* ResultViewController.xib */; };
+		11B17095286F45C600552477 /* SoundType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17094286F45C600552477 /* SoundType.swift */; };
+		11B17098286F5A7F00552477 /* WordPairViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17097286F5A7F00552477 /* WordPairViewModel.swift */; };
+		11B1709A286F5DB000552477 /* StateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B17099286F5DB000552477 /* StateViewModel.swift */; };
+		11B1709E286F666300552477 /* ResultViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B1709D286F666300552477 /* ResultViewModel.swift */; };
+		11B170A2286F6BA200552477 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B170A0286F6BA200552477 /* ResultTableViewCell.swift */; };
+		11B170A3286F6BA200552477 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B170A1286F6BA200552477 /* ResultTableViewCell.xib */; };
+		11B170A52870A33E00552477 /* ResultTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B170A42870A33E00552477 /* ResultTableViewHeader.swift */; };
+		11B170A72870A34800552477 /* ResultTableViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11B170A62870A34800552477 /* ResultTableViewHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,12 +60,20 @@
 		11B17072286F18AE00552477 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		11B17073286F18AE00552477 /* CButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CButton.swift; sourceTree = "<group>"; };
 		11B17074286F18AE00552477 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		11B1707F286F19FC00552477 /* MusicPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
-		11B17082286F1A1800552477 /* clock.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clock.mp3; sourceTree = "<group>"; };
+		11B1707F286F19FC00552477 /* SoundHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundHandler.swift; sourceTree = "<group>"; };
 		11B17083286F1A1800552477 /* finish.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = finish.mp3; sourceTree = "<group>"; };
 		11B17084286F1A1800552477 /* kids.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kids.mp3; sourceTree = "<group>"; };
-		11B17085286F1A1800552477 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		11B17086286F1A1800552477 /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		11B1708D286F44CB00552477 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		11B1708E286F44CB00552477 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
+		11B17094286F45C600552477 /* SoundType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundType.swift; sourceTree = "<group>"; };
+		11B17097286F5A7F00552477 /* WordPairViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordPairViewModel.swift; sourceTree = "<group>"; };
+		11B17099286F5DB000552477 /* StateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewModel.swift; sourceTree = "<group>"; };
+		11B1709D286F666300552477 /* ResultViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewModel.swift; sourceTree = "<group>"; };
+		11B170A0286F6BA200552477 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		11B170A1286F6BA200552477 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = "<group>"; };
+		11B170A42870A33E00552477 /* ResultTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewHeader.swift; sourceTree = "<group>"; };
+		11B170A62870A34800552477 /* ResultTableViewHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultTableViewHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +108,11 @@
 			children = (
 				11B1703D286ED2F000552477 /* AppDelegate.swift */,
 				11B1703F286ED2F000552477 /* SceneDelegate.swift */,
-				11B17057286ED59700552477 /* Model */,
-				11B1705C286ED7A700552477 /* Handler */,
+				11B17057286ED59700552477 /* Models */,
+				11B17096286F5A4200552477 /* ViewModels */,
 				11B17051286ED44700552477 /* Views */,
+				11B1705C286ED7A700552477 /* Handler */,
+				11B17091286F459E00552477 /* Unums */,
 				11B17070286F18AE00552477 /* Extensions */,
 				11B17081286F1A1800552477 /* Sound Effect */,
 				11B1705F286EDDA800552477 /* words.json */,
@@ -110,6 +128,7 @@
 			children = (
 				11B17061286EDE1700552477 /* PreGame */,
 				11B17056286ED4DB00552477 /* Playground */,
+				11B1708C286F44AC00552477 /* ResultView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -123,21 +142,21 @@
 			path = Playground;
 			sourceTree = "<group>";
 		};
-		11B17057286ED59700552477 /* Model */ = {
+		11B17057286ED59700552477 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				11B17058286ED5CA00552477 /* Word.swift */,
 				11B1705A286ED66D00552477 /* WordPair.swift */,
-				11B17066286EF1FC00552477 /* MainGame.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		11B1705C286ED7A700552477 /* Handler */ = {
 			isa = PBXGroup;
 			children = (
-				11B1707F286F19FC00552477 /* MusicPlayer.swift */,
+				11B17066286EF1FC00552477 /* MainGame.swift */,
 				11B1705D286ED7B700552477 /* GameHandler.swift */,
+				11B1707F286F19FC00552477 /* SoundHandler.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -165,13 +184,50 @@
 		11B17081286F1A1800552477 /* Sound Effect */ = {
 			isa = PBXGroup;
 			children = (
-				11B17082286F1A1800552477 /* clock.mp3 */,
 				11B17083286F1A1800552477 /* finish.mp3 */,
 				11B17084286F1A1800552477 /* kids.mp3 */,
-				11B17085286F1A1800552477 /* music.mp3 */,
 				11B17086286F1A1800552477 /* click.wav */,
 			);
 			path = "Sound Effect";
+			sourceTree = "<group>";
+		};
+		11B1708C286F44AC00552477 /* ResultView */ = {
+			isa = PBXGroup;
+			children = (
+				11B1708D286F44CB00552477 /* ResultViewController.swift */,
+				11B1708E286F44CB00552477 /* ResultViewController.xib */,
+				11B1709F286F695600552477 /* Cell */,
+			);
+			path = ResultView;
+			sourceTree = "<group>";
+		};
+		11B17091286F459E00552477 /* Unums */ = {
+			isa = PBXGroup;
+			children = (
+				11B17094286F45C600552477 /* SoundType.swift */,
+			);
+			path = Unums;
+			sourceTree = "<group>";
+		};
+		11B17096286F5A4200552477 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				11B17097286F5A7F00552477 /* WordPairViewModel.swift */,
+				11B17099286F5DB000552477 /* StateViewModel.swift */,
+				11B1709D286F666300552477 /* ResultViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		11B1709F286F695600552477 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				11B170A0286F6BA200552477 /* ResultTableViewCell.swift */,
+				11B170A1286F6BA200552477 /* ResultTableViewCell.xib */,
+				11B170A42870A33E00552477 /* ResultTableViewHeader.swift */,
+				11B170A62870A34800552477 /* ResultTableViewHeader.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,15 +288,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B170A3286F6BA200552477 /* ResultTableViewCell.xib in Resources */,
 				11B17088286F1A1800552477 /* finish.mp3 in Resources */,
+				11B170A72870A34800552477 /* ResultTableViewHeader.xib in Resources */,
 				11B17089286F1A1800552477 /* kids.mp3 in Resources */,
-				11B1708A286F1A1800552477 /* music.mp3 in Resources */,
 				11B17055286ED4D600552477 /* PlaygroundViewController.xib in Resources */,
 				11B17060286EDDA800552477 /* words.json in Resources */,
 				11B1704A286ED2F400552477 /* LaunchScreen.storyboard in Resources */,
-				11B17087286F1A1800552477 /* clock.mp3 in Resources */,
 				11B1708B286F1A1800552477 /* click.wav in Resources */,
 				11B17047286ED2F400552477 /* Assets.xcassets in Resources */,
+				11B17090286F44CB00552477 /* ResultViewController.xib in Resources */,
 				11B17065286EDE2E00552477 /* PreGameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,17 +309,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B17080286F19FC00552477 /* MusicPlayer.swift in Sources */,
+				11B17080286F19FC00552477 /* SoundHandler.swift in Sources */,
+				11B1709E286F666300552477 /* ResultViewModel.swift in Sources */,
 				11B17067286EF1FC00552477 /* MainGame.swift in Sources */,
 				11B1707E286F18AE00552477 /* UIViewController.swift in Sources */,
 				11B1703E286ED2F000552477 /* AppDelegate.swift in Sources */,
 				11B1707D286F18AE00552477 /* CButton.swift in Sources */,
 				11B17064286EDE2E00552477 /* PreGameViewController.swift in Sources */,
+				11B1709A286F5DB000552477 /* StateViewModel.swift in Sources */,
+				11B17098286F5A7F00552477 /* WordPairViewModel.swift in Sources */,
 				11B1707C286F18AE00552477 /* UIColor.swift in Sources */,
 				11B1705B286ED66D00552477 /* WordPair.swift in Sources */,
 				11B1705E286ED7B700552477 /* GameHandler.swift in Sources */,
+				11B1708F286F44CB00552477 /* ResultViewController.swift in Sources */,
 				11B17059286ED5CA00552477 /* Word.swift in Sources */,
+				11B17095286F45C600552477 /* SoundType.swift in Sources */,
+				11B170A2286F6BA200552477 /* ResultTableViewCell.swift in Sources */,
 				11B1707B286F18AE00552477 /* UIView.swift in Sources */,
+				11B170A52870A33E00552477 /* ResultTableViewHeader.swift in Sources */,
 				11B17040286ED2F000552477 /* SceneDelegate.swift in Sources */,
 				11B17054286ED4D600552477 /* PlaygroundViewController.swift in Sources */,
 			);

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultViewController" customModule="WordGame" customModuleProvider="target">
+            <connections>
+                <outlet property="resultTableView" destination="Vkv-3d-9Yh" id="e9Z-hA-Rdw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWx-ra-7wu">
+                    <rect key="frame" x="0.0" y="-16" width="414" height="938"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="w83-SD-mJ7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="938"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="systemUltraThinMaterialDark"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWR-KH-lHf" customClass="CView" customModule="WordGame" customModuleProvider="target">
+                    <rect key="frame" x="40" y="293" width="334" height="320"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="1" sectionFooterHeight="1" estimatedSectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vkv-3d-9Yh">
+                            <rect key="frame" x="24" y="24" width="286" height="200"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vi5-Nx-sO3" customClass="CButton" customModule="WordGame" customModuleProvider="target">
+                            <rect key="frame" x="24" y="248" width="135" height="48"/>
+                            <color key="backgroundColor" name="PRIMARY_1"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="eXt-Ng-kSq"/>
+                            </constraints>
+                            <color key="tintColor" name="PRIMARY_2"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Restart">
+                                <fontDescription key="titleFontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="restartAction:" destination="-1" eventType="touchUpInside" id="XZt-mI-yLb"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rw-Bh-98w" customClass="CButton" customModule="WordGame" customModuleProvider="target">
+                            <rect key="frame" x="175" y="248" width="135" height="48"/>
+                            <color key="backgroundColor" name="PRIMARY_4"/>
+                            <color key="tintColor" name="PRIMARY_2"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Exit">
+                                <fontDescription key="titleFontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="16"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="exitAction:" destination="-1" eventType="touchUpInside" id="etj-cR-MRk"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="PRIMARY_2"/>
+                    <constraints>
+                        <constraint firstItem="8rw-Bh-98w" firstAttribute="leading" secondItem="Vi5-Nx-sO3" secondAttribute="trailing" constant="16" id="3uH-mK-oWj"/>
+                        <constraint firstItem="8rw-Bh-98w" firstAttribute="centerY" secondItem="Vi5-Nx-sO3" secondAttribute="centerY" id="4eC-o5-4U8"/>
+                        <constraint firstItem="8rw-Bh-98w" firstAttribute="height" secondItem="Vi5-Nx-sO3" secondAttribute="height" id="BLd-r2-CoU"/>
+                        <constraint firstAttribute="trailing" secondItem="8rw-Bh-98w" secondAttribute="trailing" constant="24" id="GI0-8m-lXI"/>
+                        <constraint firstAttribute="height" constant="320" id="Gxg-fs-CoB"/>
+                        <constraint firstItem="Vi5-Nx-sO3" firstAttribute="top" secondItem="Vkv-3d-9Yh" secondAttribute="bottom" constant="24" id="Gy6-IY-pvC"/>
+                        <constraint firstItem="8rw-Bh-98w" firstAttribute="width" secondItem="Vi5-Nx-sO3" secondAttribute="width" id="IK0-Kh-ToB"/>
+                        <constraint firstAttribute="trailing" secondItem="Vkv-3d-9Yh" secondAttribute="trailing" constant="24" id="JrY-k9-1bF"/>
+                        <constraint firstItem="Vi5-Nx-sO3" firstAttribute="leading" secondItem="FWR-KH-lHf" secondAttribute="leading" constant="24" id="igA-8I-sKk"/>
+                        <constraint firstItem="Vkv-3d-9Yh" firstAttribute="leading" secondItem="FWR-KH-lHf" secondAttribute="leading" constant="24" id="p04-7N-C4g"/>
+                        <constraint firstItem="Vkv-3d-9Yh" firstAttribute="top" secondItem="FWR-KH-lHf" secondAttribute="top" constant="24" id="vfI-TX-3dA"/>
+                        <constraint firstAttribute="bottom" secondItem="Vi5-Nx-sO3" secondAttribute="bottom" constant="24" id="y9K-a2-yjB"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FWR-KH-lHf" secondAttribute="trailing" constant="40" id="2tD-tk-p5D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zWx-ra-7wu" secondAttribute="bottom" constant="-60" id="7lt-kR-Rhh"/>
+                <constraint firstItem="FWR-KH-lHf" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="DNZ-Ls-OOR"/>
+                <constraint firstItem="zWx-ra-7wu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IvO-oX-AZQ"/>
+                <constraint firstItem="zWx-ra-7wu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-60" id="px8-Hc-Be2"/>
+                <constraint firstItem="FWR-KH-lHf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="rZF-QM-2DH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zWx-ra-7wu" secondAttribute="trailing" id="v2e-AK-ZaQ"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="58"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="PRIMARY_1">
+            <color red="0.8774048686" green="0.52855157850000001" blue="0.2822600603" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="PRIMARY_2">
+            <color red="0.99607843159999998" green="0.99607843159999998" blue="0.99607843159999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="PRIMARY_4">
+            <color red="0.18978458640000001" green="0.29018348459999999" blue="0.47061061859999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

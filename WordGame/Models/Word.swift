@@ -9,12 +9,12 @@ import Foundation
 
 struct Word : Decodable {
     
-    var EnglishText : String
-    var SpanishText : String
+    var englishText : String
+    var spanishText : String
     
     enum CodingKeys: String, CodingKey {
         
-        case EnglishText = "text_eng"
-        case SpanishText = "text_spa"
+        case englishText = "text_eng"
+        case spanishText = "text_spa"
     }
 }
